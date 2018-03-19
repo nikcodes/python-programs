@@ -1,0 +1,22 @@
+n,rc0 = [int(i) for i in input().split()]
+a = []
+for _ in range(n):
+    a.append([int(i) for i in input().split()])
+
+first = [[0, rc0, 0]]
+for e in first:
+    t = []
+    c=0
+    for _ in range(e[1]):
+        if a!=[]:
+            c+=1
+            poping = a.pop(0)
+            poping.append(e[2] + 1)
+            t.append(poping)
+        else:
+            break
+    first += t
+    for i in range(c):
+        print(e[0], e[2]+1, i+1)
+    if a == []:
+        break
