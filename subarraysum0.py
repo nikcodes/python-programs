@@ -4,7 +4,10 @@ for _ in range(int(input())):
     b=[a[0]]
     for e in a[1:]:
         b.append(b[-1]+e)
-    if len(set(b))<n:
+    if 0 in b:
         print('Yes')
     else:
-        print('No')
+        if len(set(b))<n:
+            print('Yes')
+        else:
+            print('No')
