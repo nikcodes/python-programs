@@ -13,7 +13,7 @@ class Solution:
                 pl += 1
 
             for j in range(pl):
-                if prime[j] * i > n:
+                if prime[j] * i > n or prime[j]>spf[i]:
                     break
                 p[prime[j] * i] = 0
                 spf[prime[j] * i] = prime[j]
